@@ -6,10 +6,10 @@
         android:icon="@drawable/ic_food_white" />
     <item
         android:id="@+id/home"
-        android:title="Home"
+        android:title="Food 2"
         android:icon="@drawable/home_white"/>
     <item
         android:id="@+id/setting"
-        android:title="Setting"
-        android:icon="@drawable/setting_white"/>
+        android:title="Profile"
+        android:icon="@drawable/ic_profile_white" />
 </menu>

@@ -6,6 +6,8 @@ public class Food {
     private String Description;
     private int Quantity = 0;
 
+
+
     public Food(String name, int image, String description) {
         Name = name;
         Image = image;
