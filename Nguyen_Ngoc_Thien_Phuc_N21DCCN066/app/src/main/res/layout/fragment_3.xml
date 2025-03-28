@@ -24,7 +24,7 @@
                 android:src="@drawable/ic_arrow_back"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:tint="#000000" />
+                app:tint="#000000" />
 
             <TextView
                 android:text="Edit profile"
@@ -41,7 +41,7 @@
                 android:src="@drawable/ic_check"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:tint="#000000" />
+                app:tint="#000000" />
         </LinearLayout>
 
         <!-- Banner blue background with avatar -->
@@ -69,7 +69,7 @@
                 android:src="@drawable/ic_edit"
                 android:background="@drawable/circle_pink"
                 android:padding="4dp"
-                android:tint="#FFFFFF" />
+                app:tint="#FFFFFF" />
         </RelativeLayout>
 
         <!-- Profile details -->
