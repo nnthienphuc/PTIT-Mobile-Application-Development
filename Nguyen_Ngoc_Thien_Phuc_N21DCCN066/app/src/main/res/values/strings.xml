@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MidTermTest</string>
+    <string name="btn_plus">Increase</string>
+    <string name="btn_minus">Decrease</string>
+    <string name="food_image_desc">Ảnh món ăn</string>
+
+</resources>
