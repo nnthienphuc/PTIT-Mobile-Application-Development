@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             public void onPageSelected(int position) {
                 switch (position) {
                     case 0:
-                        mBottomNavigationView.getMenu().findItem(R.id.person).setChecked(true);
+                        mBottomNavigationView.getMenu().findItem(R.id.food).setChecked(true);
                         //getSupportActionBar().setTitle("Person");
 
                         break;
@@ -65,10 +65,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.person:
+                    case R.id.food:
                         mViewPager.setCurrentItem(0);
-                        //getSupportActionBar().setTitle("Person");
                         break;
+
                     case R.id.home:
                         mViewPager.setCurrentItem(1);
                         //getSupportActionBar().setTitle("Home");
