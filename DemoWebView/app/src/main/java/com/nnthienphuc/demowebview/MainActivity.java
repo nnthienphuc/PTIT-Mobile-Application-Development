@@ -13,19 +13,16 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    EditText editText;
     WebView webView;
-
+    EditText editText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-
-        editText.findViewById(R.id.edtURL);
-        webView.findViewById(R.id.webView);
+        webView = findViewById(R.id.webView);
+        editText = findViewById(R.id.editTextUrl);
         webView.setWebViewClient(new WebViewClient());
-
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -33,22 +30,23 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void btnBack(View view) {
-        if (webView.canGoBack())
+    public void onBackButtonClicked(View view) {
+        if (webView.canGoBack()) {
             webView.goBack();
+        }
     }
 
-    public void btnForward(View view) {
-        if(webView.canGoForward())
+    public void onForwardButtonClicked(View view) {
+        if (webView.canGoForward()) {
             webView.goForward();
+        }
     }
 
-    public void btnReload(View view) {
+    public void onReloadButtonClicked(View view) {
         webView.reload();
     }
 
-    public void btnGo(View view) {
-        String url = editText.getText().toString();
-        webView.loadUrl(url);
+    public void onGoButtonClicked(View view) {
+        webView.loadUrl(editText.getText().toString());
     }
 }

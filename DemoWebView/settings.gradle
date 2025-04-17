@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "DemoWebView"
+rootProject.name = "DemoWebview"
 include ':app'

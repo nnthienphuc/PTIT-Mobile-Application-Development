@@ -17,9 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-
-        imageView = findViewById(R.id.imgShowPicture);
-
+        imageView = findViewById(R.id.imageView);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -27,11 +25,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void showLinkedIn(View view) {
-        imageView.setImageResource(R.drawable.linkedin);
+    public void onFacebookBtnClick(View view) {
+        imageView.setImageResource(R.drawable.facebook);
     }
 
-    public void showFacebook(View view) {
-        imageView.setImageResource(R.drawable.facebook);
+    public void onTwitterBtnClick(View view) {
+        imageView.setImageResource(R.drawable.twitter);
     }
 }

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:paddingTop="50dp"
+    android:paddingHorizontal="20dp"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_1"
+        android:text="Haha"
+        android:visibility="visible"
+        app:backgroundTint="@null" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:backgroundTint="@null"
+        android:text="Haha"
+        android:background="@drawable/button_2"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="visible"
+        android:layout_gravity="center"
+        app:backgroundTint="@null"
+        android:text="Go"
+        android:background="@drawable/button_3"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/person_24"
+        android:drawableTint="#FF0000"
+        android:hint="Name"
+        android:background="@drawable/edit_text_1"/>
+</LinearLayout>
