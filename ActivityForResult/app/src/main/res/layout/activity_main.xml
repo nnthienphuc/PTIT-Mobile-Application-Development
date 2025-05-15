@@ -2,21 +2,21 @@
 <LinearLayout
     android:id="@+id/main"
     xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-android:layout_margin="20dp"
-tools:context=".MainActivity" >
-    <TextView
-    android:id="@+id/txtTittleTop"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:gravity="center"
-    android:textSize="30sp"
-    android:background="#FFE4AE"
-    android:text="Tittle Top" />
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    tools:context=".MainActivity" >
+    <TextView
+        android:id="@+id/txtTittleTop"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:background="#FFE4AE"
+        android:text="Tittle Top" />
 
     <Button
         android:id="@+id/btnChangeTop"

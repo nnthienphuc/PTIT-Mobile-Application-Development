@@ -5,21 +5,23 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".MainActivity"
     android:gravity="center"
-    android:padding="16dp"
     android:background="@drawable/login_background"
-    tools:context=".MainActivity">
+    android:padding="16dp">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical">
         <ImageView
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:src="@drawable/baseline_1k_24"/>
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/baseline_account_circle_24"/>
+
         <EditText
-            android:id="@+id/username_input"
+            android:id="@+id/username_edt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Username"
@@ -29,19 +31,22 @@
             android:padding="18dp"
             android:inputType="text"
             android:background="@drawable/round_corner"/>
+
         <EditText
-            android:id="@+id/password_input"
+            android:id="@+id/password_edt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:hint="Password"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:textSize="20dp"
-            android:inputType="textPassword"
+            android:layout_marginTop="18dp"
             android:padding="18dp"
+            android:inputType="textPassword"
             android:background="@drawable/round_corner"/>
+
         <Button
+            android:id="@+id/login_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Login"
@@ -49,8 +54,8 @@
             android:textColor="#3B84F1"
             android:padding="18dp"
             android:layout_marginTop="32dp"
-            android:textSize="20dp"
-            android:id="@+id/login_btn"/>
+            android:textSize="20dp"/>
+
         <CheckBox
             android:id="@+id/rememberMe"
             android:layout_width="wrap_content"
@@ -58,6 +63,7 @@
             android:textColor="@color/white"
             android:buttonTint="@color/white"
             android:text="Remember me"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -71,14 +77,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="18dp"
-            android:gravity="center"
-            >
+            android:gravity="center"    >
             <ImageView
                 android:id="@+id/facebook_btn"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_margin="16dp"
                 android:src="@drawable/face"/>
+
             <ImageView
                 android:id="@+id/google_btn"
                 android:layout_width="64dp"
@@ -87,4 +93,5 @@
                 android:src="@drawable/google"/>
         </LinearLayout>
     </LinearLayout>
+
 </RelativeLayout>

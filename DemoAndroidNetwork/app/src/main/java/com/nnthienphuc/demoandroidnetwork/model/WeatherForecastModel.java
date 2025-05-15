@@ -1,6 +1,5 @@
 package com.nnthienphuc.demoandroidnetwork.model;
 
-
 public class WeatherForecastModel {
     private String time;
     private String temperature;
@@ -12,9 +11,6 @@ public class WeatherForecastModel {
         this.temperature = temperature;
         this.icon = icon;
         this.windSpeed = windSpeed;
-    }
-
-    public WeatherForecastModel() {
     }
 
     public String getTime() {

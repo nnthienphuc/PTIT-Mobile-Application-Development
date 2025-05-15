@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         lvCity = findViewById(R.id.lvCity);
-        cityArrayList.add(new City("NewYork",R.drawable.newyork,"http://1.com"));
+        cityArrayList.add(new City("NewYork",R.drawable.newyork,"https://tuoitre.vn/"));
         cityArrayList.add(new City("Paris",R.drawable.paris,"http://2.com"));
         cityArrayList.add(new City("Rome",R.drawable.rome,"http://3.com"));
         adapter = new CityAdapter(this,R.layout.dong_thanh_pho,cityArrayList);

@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activity.MainActivity"
-    android:id="@+id/main">
+    tools:context=".activity.MainActivity" >
     <TextView
         android:id="@+id/txtCityName"
         android:layout_width="match_parent"

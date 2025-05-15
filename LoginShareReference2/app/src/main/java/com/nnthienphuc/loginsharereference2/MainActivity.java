@@ -25,13 +25,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        init();
-        checkLogin();
+
+        this.initAndMappingViews();
+        this.checkLogin();  //--Check if "Remember me" is checked & User's already logged-in.
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (username.getText().toString().equals("admin") &&
-                        password.getText().toString().equals("123456")) {
+                        password.getText().toString().equals("123123")) {
                     if (rememberMe.isChecked()) {
                         SharedPreferences sharedPreferences =
                                 getSharedPreferences("login_check", MODE_PRIVATE);
@@ -42,30 +44,33 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     Intent intent = new
-                            Intent(MainActivity.this, MainActivity2.class);
+                            Intent(MainActivity.this, Home.class);
                     startActivity(intent);
                 } else {
                     Toast.makeText(MainActivity.this, "Vui lòng nhập lại mật khẩu", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+    }
+
+    private void initAndMappingViews() {
+        username = findViewById(R.id.username_edt);
+        password = findViewById(R.id.password_edt);
+        btnLogin = findViewById(R.id.login_btn);
+        rememberMe = findViewById(R.id.rememberMe);
     }
 
     private void checkLogin() {
-        SharedPreferences sharedPreferences =
-                getSharedPreferences("login_check", MODE_PRIVATE);
+        var sharedPreferences = this.getSharedPreferences("login_check", MODE_PRIVATE);
         String login = sharedPreferences.getString("login", "");
         if (login.equals("true")) {
-            Intent intent = new
-                    Intent(MainActivity.this, MainActivity2.class);
-            startActivity(intent);
+            Intent homePage = new Intent(MainActivity.this, Home.class);
+            this.startActivity(homePage);
         }
-    }
-
-    private void init() {
-        username = findViewById(R.id.username_input);
-        password = findViewById(R.id.password_input);
-        btnLogin = findViewById(R.id.login_btn);
-        rememberMe = findViewById(R.id.rememberMe);
     }
 }
