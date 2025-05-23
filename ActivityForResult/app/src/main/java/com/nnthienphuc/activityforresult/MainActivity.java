@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        String title = data.getStringExtra("yourTitle");
+        String title = data.getStringExtra("Test title");
         if(requestCode == REQUEST_CODE_TOP) {
             if(resultCode == RESULT_CODE_UPPER) tvTop.setText(title.toUpperCase());
             if(resultCode == RESULT_CODE_LOWER) tvTop.setText(title.toLowerCase());
